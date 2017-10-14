@@ -3,6 +3,7 @@
 定义函数countchar()按字母表顺序统计字符串中所有出现的字母的个数（允许输入大写字符，并且计数时不区分大小写）。形如：
 """
 
+
 def countchar1(str):
     table = dict(zip('abcdefghijklmnopqrstuvwxyz',[0]*26))
 
@@ -10,7 +11,7 @@ def countchar1(str):
         if table.get(s) is not None:
             table[s] += 1
     return list(table.values())
-        
+
 
 # def countchar(str):
 #     from collections import Counter
@@ -23,12 +24,11 @@ def countchar(str):
     lst = [0] * 26
 
     for c in str.lower():
-        if  97 <= ord(c) <= 122:
+        if 97 <= ord(c) <= 122:
             lst[ord(c) - 97] += 1
-    
+
     return lst
 
-    
 
 if __name__ == "__main__":
     import string
